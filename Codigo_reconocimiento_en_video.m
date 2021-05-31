@@ -1,7 +1,7 @@
 clc;
 close all;
 clear;
-vidObj = VideoWriter('Vidfinal.avi');%iniciar objeto de grabación
+vidObj = VideoWriter('Vidfinal.mp4');%iniciar objeto de grabaciÃ³n
 %Leer imagen de fondo
 Fondo=imread('fondopruebafinal.jpg');
 Fondo=imresize(Fondo,0.5);
@@ -22,8 +22,8 @@ Fondo_gr=rgb2gray(Fondo);
 Frame_gr=rgb2gray(Frame);
 Frame_gr=imgaussfilt(Frame_gr,1);%Suavizado
 Out = imabsdiff(Fondo_gr,Frame_gr);%Sustraccion de fondo
-Filtrada = medfilt2(Out,[7 7]);%Filtrado para reducción de ruido
-%Converrsión a binaria
+Filtrada = medfilt2(Out,[7 7]);%Filtrado para reducciÃ³n de ruido
+%ConverrsiÃ³n a binaria
 umbral=0.18;
 S=strel('disk',	21);
 Binaria = imbinarize(Filtrada,umbral);
