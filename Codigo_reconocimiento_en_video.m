@@ -1,7 +1,7 @@
 clc;
 close all;
 clear;
-vidObj = VideoWriter('Vidfinal.mp4');%iniciar objeto de grabación
+vidObj = VideoWriter('Vidfinal.avi');%iniciar objeto de grabación
 %Leer imagen de fondo
 Fondo=imread('fondopruebafinal.jpg');
 Fondo=imresize(Fondo,0.5);
